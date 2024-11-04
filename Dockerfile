@@ -17,6 +17,5 @@ RUN curl -O https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && \
     ./configure --enable-optimizations --with-openssl=/usr/local/openssl && \
     make altinstall
 
-RUN /usr/local/bin/python3.10 -m venv /application/.venv && \
-    . /application/.venv/bin/activate && \
-    /application/.venv/bin/pip install --upgrade
+RUN /usr/local/bin/python3.10 -m venv /.venv && \
+    . /.venv/bin/activate
