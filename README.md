@@ -12,13 +12,13 @@ with dependencies that will be compatible with the lambda platform
 
 ##### Build
 ```shell
-docker build . -t amazonlinux2-python3.10:latest
+docker build . -t amazonlinux2-python3_10:latest
 ```
 
 ##### Run and source python dependencies
 the container can be run and held in running state
 ```shell
-docker run -d --name artifactbuilder amazonlinux2-python3.10:latest tail -f /dev/null
+docker run -d --name artifactbuilder amazonlinux2-python3_10:latest tail -f /dev/null
 ```
 
 assuming you have a project structured somewhat like
@@ -48,5 +48,5 @@ docker cp artifactbuilder:/your_python_package.zip .
 
 of you can reference in another docker file to start from
 ```dockerfile
-FROM amazonlinux2-python3.10:latest
+FROM amazonlinux2-python3_10:latest
 ```
